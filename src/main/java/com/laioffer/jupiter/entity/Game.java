@@ -1,14 +1,24 @@
 package com.laioffer.jupiter.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import sun.security.provider.certpath.Builder;
 
 public class Game {
     // fields
-    private String name;
-    private String developer;
-    private String releaseTime;
-    private String website;
-    private double price;
+    @JsonProperty("name")
+    public String name;
+
+    @JsonProperty("developer")
+    public String developer;
+
+    @JsonProperty("release_time")
+    public String releaseTime;
+
+    @JsonProperty("website")
+    public String website;
+
+    @JsonProperty("price")
+    public double price;
 
 //    // old constructor example
 //    public Game(String name, String developer, String releaseTime, String website, double price) {
