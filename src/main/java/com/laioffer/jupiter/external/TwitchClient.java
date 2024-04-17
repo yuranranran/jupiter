@@ -25,6 +25,7 @@ public class TwitchClient {
     private static final int DEFAULT_GAME_LIMIT = 20;
 
     // Build the request URL which will be used when calling Twitch APIs, e.g. https://api.twitch.tv/helix/games/top when trying to get top games.
+    // This method is responsible for constructing a URL for making requests to the Twitch API, which may vary based on the parameters provided.
     private String buildGameURL(String url, String gameName, int limit) {
         if (gameName.equals("")) {
             return String.format(url, limit);
